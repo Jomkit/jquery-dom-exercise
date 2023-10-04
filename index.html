@@ -74,7 +74,33 @@
 </div>
 <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 <script>
-  // Add your code here!
+  $( document ).ready(function() {
+    console.log("Let's get ready to party with jQuery!");
+  });
+
+  $('article img').addClass("image-center");
+
+  $('p').last().remove();
+
+  const rndSize = Math.floor(Math.random() * 100);
+  $('#title').css('font-size', rndSize);
+
+  $('<li>Whatever you want</li>').appendTo('ol');
+
+  $('aside').html('<p>Sorry about that list earlier, that was a bad idea</p>');
+
+  $('input').on('input', function(){
+    let r = $('input').eq(0).val();
+    let g = $('input').eq(2).val();
+    let b = $('input').eq(1).val();
+
+    $('body').css('background-color', `rgb(${r} ${g} ${b})`);
+  })
+
+  $('img').on('click', function(){
+    $(this).remove();
+  })
+  
 </script>
 </body>
 
