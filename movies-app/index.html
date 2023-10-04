@@ -14,11 +14,11 @@
             <form>
                 <div class="form-item">
                     <label for="name">Movie Title: </label>
-                    <input type="text" class="form-input" name="Movie-Title" placeholder="Citizen Kane" required />    
+                    <input type="text" minlength="2" class="form-input" name="Movie-Title" placeholder="Citizen Kane" required />    
                 </div>
                 <div class="form-item">
                     <label>Rating (1-10):</label>
-                    <input type="text" class="form-input" name="Rating" placeholder="10" required />
+                    <input type="number" min="0" max="10" class="form-input" name="Rating" placeholder="10" required />
                 </div>
 
                 <div class="form-submit-container">
@@ -29,6 +29,13 @@
 
         <h1 id="movie-title">Movie Gallery</h1>
         <secton class="movie-gallery">
+            <div class="settings">
+                <label>Sort Movie Titles:</label>
+                <button id="alphabetical">Alphabetical</button>
+                <label>Sort Rating: </label>
+                <button id="ascend">Ascending</button>
+                <button id="descend">Descending</button>
+            </div>
             <ul id="movies">
 
             </ul>
